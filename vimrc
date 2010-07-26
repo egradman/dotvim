@@ -4,22 +4,22 @@ highlight Normal guifg=Black guibg=#ffefd5
 
 set visualbell
 set noerrorbells
-set ruler		" show the cursor position all the time
+set ruler       " show the cursor position all the time
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set autoindent		" always set autoindenting on
-set history=50		" keep 50 lines of command line history
-set showcmd		    " display incomplete commands
-set sw=2
-set ts=2
+set autoindent      " always set autoindenting on
+set history=50      " keep 50 lines of command line history
+set showcmd         " display incomplete commands
+set sw=4
+set ts=4
 set expandtab
 set showmatch
 set number
 se viewdir=~/.vim/view
 
-map Q gq	" format paragraph
+map Q gq    " format paragraph
 
 " Make p in Visual mode replace the selected text with the "" register.
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
@@ -53,15 +53,6 @@ map gr :set ro!<cr>
 set wildmode=longest,list
 
 set directory=~/tmp,/var/tmp,/tmp
-
-python << EOF
-import os
-import sys
-import vim
-for p in sys.path:
-  if os.path.isdir(p):
-    vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-EOF
 
 set tags+=$HOME/.vim/tags/python26.ctags
 let g:miniBufExplMapWindowNavArrows = 1 
