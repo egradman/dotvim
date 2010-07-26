@@ -54,5 +54,4 @@ set wildmode=longest,list
 
 set directory=~/tmp,/var/tmp,/tmp
 
-set tags+=$HOME/.vim/tags/python26.ctags
-let g:miniBufExplMapWindowNavArrows = 1 
+filetype plugin indent on
