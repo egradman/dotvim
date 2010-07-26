@@ -54,14 +54,4 @@ set wildmode=longest,list
 
 set directory=~/tmp,/var/tmp,/tmp
 
-python << EOF
-import os
-import sys
-import vim
-for p in sys.path:
-  if os.path.isdir(p):
-    vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-EOF
-
-set tags+=$HOME/.vim/tags/python26.ctags
-let g:miniBufExplMapWindowNavArrows = 1 
+filetype plugin indent on
