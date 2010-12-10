@@ -6,6 +6,8 @@ set visualbell
 set noerrorbells
 set ruler       " show the cursor position all the time
 
+set nofoldenable
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
