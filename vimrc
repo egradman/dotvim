@@ -14,8 +14,8 @@ set backspace=indent,eol,start
 set autoindent      " always set autoindenting on
 set history=50      " keep 50 lines of command line history
 set showcmd         " display incomplete commands
-set sw=4
-set ts=4
+set sw=2
+set ts=2
 set expandtab
 set showmatch
 set number
