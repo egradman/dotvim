@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/egradman/.vim/.git'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/egradman/dev/pearson/geom2d/imth-7-4-4-4-3/app/engines/geom2d/views'
+let g:netrw_dirhist_2='/Users/egradman/dev/robotmusic/pandroid/src'
+let g:netrw_dirhist_3='/Users/egradman/dev/pearson/geom2d/imth-7-4-4-4-1'

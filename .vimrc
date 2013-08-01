@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+se background=light
+
 se sw=2
 se ts=2
 se expandtab
@@ -55,6 +57,7 @@ set ignorecase                  " case insensitive search
 set smartcase                   " case sensitive when uc present
 set wildmenu                    " show list instead of just completing
 set wildmode=list,full  
+set wildignore=*.meta
 set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
 set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=3                 " minimum lines to keep above and below cursor
@@ -67,17 +70,21 @@ let mapleader = '\'
 nnoremap j gj
 nnoremap k gk
 
+nmap \1 :setlocal number!<CR>
+nmap \p :set paste!<CR>
+
 cmap w!! w !sudo tee % >/dev/null
 
-nnoremap <silent> <D-t> :CtrlP<CR>
-nnoremap <silent> <D-r> :CtrlPMRU<CR>
-nnoremap <silent> <leader>b :CtrlPBuffer<CR>
-nnoremap <silent> <leader>f :CtrlPMixed<CR>
+nnoremap <silent> <leader>f :CtrlP<CR>
+nnoremap <silent> ; :CtrlPBuffer<CR>
 nnoremap <silent> <leader>r :CtrlPClearAllCaches<CR>
-let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$',
   \ 'file': '\.exe$\|\.so$\|\.dll$' }
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_mruf_relative = 1
-map <leader>t :NERDTreeFind<CR>
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+
+map <leader>t :NERDTreeToggle<CR>
